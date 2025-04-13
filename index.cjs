@@ -28,7 +28,9 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-app.listen(3000, '0.0.0.0', () => {
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, '0.0.0.0', () => {
   console.log("Server Running on port 3000");
 });
 
