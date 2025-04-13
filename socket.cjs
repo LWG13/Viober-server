@@ -10,7 +10,7 @@ const io = new Server(httpServer, {
   cors: {
     origin: "https://a7967ab8-1bb8-4301-b7e9-ac474e9dda2a-00-16da4blhmya43.pike.replit.dev",
     methods: ["GET", "POST", "PUT"],
-    transports: ["websocket", "polling"],
+    transports: ["polling"],
   }
 });
 io.on('connection', socket => {
