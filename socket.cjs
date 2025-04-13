@@ -3,7 +3,7 @@ const express = require("express")
 const app = express();
 
 const httpServer = app.listen(3000, () => {
-  console.log(`API server listening at ${PORT}`);
+  console.log(`API server listening at 3000`);
 });
 
 const io = new Server(httpServer, {
