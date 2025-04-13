@@ -1,0 +1,26 @@
+entrypoint = "index.cjs"
+modules = ["nodejs-22"]
+hidden = [".config", "package-lock.json"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["node", "index.cjs"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[workflows]
+runButton = "Start Server"
+
+[[workflows.workflow]]
+name = "Start Server"
+author = 36994267
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node index.cjs"
