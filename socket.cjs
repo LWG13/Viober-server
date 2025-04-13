@@ -1,8 +1,8 @@
 const { Server } = require('socket.io');
 const express = require("express")
 const app = express();
-const PORT = process.env.PORT || 3000;
-const httpServer = app.listen(PORT, () => {
+
+const httpServer = app.listen(3000, () => {
   console.log(`API server listening at ${PORT}`);
 });
 
