@@ -11,7 +11,7 @@ const dotenv = require("dotenv");
 const app = express();
 app.use(cookieParser())
 connect();
-app.use(cors({ origin: "https://viober.vercel.app"}));
+app.use(cors({ origin: "https://viober.vercel.app", methods: ["GET","POST","PUT","DELETE"]}));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' })); //Added urlencoded parser
 app.use(express.json({ limit: '50mb' }));
